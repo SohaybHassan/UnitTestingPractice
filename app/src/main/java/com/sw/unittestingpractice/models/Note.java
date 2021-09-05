@@ -134,7 +134,10 @@ public class Note implements Parcelable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        Note note=(Note) obj;
-        return  note.getId()== getId()&&note.getTitle().equals(getTitle());
+        Note note = (Note) obj;
+        return note.getId() == getId()
+                && note.getTitle().equals(getTitle())
+                && note.getContent().equals(getContent())
+                && note.getTimestimp().equals(getTimestimp());
     }
 }
