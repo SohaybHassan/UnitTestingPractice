@@ -43,7 +43,7 @@ public class DateUtilTest {
     public void testMonthFromNumber_returnError(int monthNumber, TestInfo testInfo, TestReporter testReporter){
             int randomInt=new Random().nextInt(90)+13;
         assertEquals(DateUtil.getMonthFromNumber(String.valueOf(monthNumber* randomInt)),GET_MONTH_ERROR);
-        System.out.println(monthNumbers[monthNumber]+" : "+ months[monthNumber]);
+        System.out.println(monthNumbers[monthNumber]+" : "+ GET_MONTH_ERROR);
     }
 
 
