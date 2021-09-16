@@ -1,6 +1,6 @@
 package com.sw.unittestingpractice.di;
 
-import com.sw.unittestingpractice.NoteListActivity;
+import com.sw.unittestingpractice.ui.notelist.NoteListActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

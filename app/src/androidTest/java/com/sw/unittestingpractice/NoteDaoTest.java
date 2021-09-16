@@ -36,8 +36,6 @@ public class NoteDaoTest extends NoteDatabaseTest {
         Note note = new Note(TestUtil.TEST_NOTE_1);
         //Insert
         getNoteDao().insertNote(note).blockingGet();// wait until inserted
-
-
         //read
         LiveDataTestUtil<List<Note>> listLiveDataTestUtil = new LiveDataTestUtil<>();
         List<Note> insertedNotes = listLiveDataTestUtil.getValue(getNoteDao().getNotes());
@@ -59,7 +57,6 @@ public class NoteDaoTest extends NoteDatabaseTest {
         insertedNotes = listLiveDataTestUtil.getValue(getNoteDao().getNotes());
         assertEquals(0, insertedNotes.size());
     }
-
     /*
        Insert, Read, Update, Read, Delete,
     */
@@ -107,8 +104,6 @@ public class NoteDaoTest extends NoteDatabaseTest {
 
         insertedNotes = listLiveDataTestUtil.getValue(getNoteDao().getNotes());
         assertEquals(0, insertedNotes.size());
-
-
     }
 
      /*
@@ -145,7 +140,5 @@ public class NoteDaoTest extends NoteDatabaseTest {
         note = new Note(insertNote.get(0));
         note.setTitle(null);
         getNoteDao().updateNote(note).blockingGet();
-
-
     }
 }
